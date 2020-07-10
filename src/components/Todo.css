@@ -1,0 +1,50 @@
+*{
+    color: aqua;
+}
+
+html{
+    background-color: darkgray;
+}
+
+.app-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1d4068;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2%;
+    border-radius: 7px;
+}
+
+.todo-list-container{
+    border: #ffffff solid 2px;
+    border-radius: 7px;
+    width: 600px;
+    background-color: #2f3336 ; 
+    margin: 5%;
+}
+
+.todo-list{
+    list-style: upper-latin;
+    
+   
+}
+
+li {
+    color: white;
+}
+
+.add-task-btn{
+    background-color: black;
+    border: ridge 2px darkgrey;
+    margin-left: 5px;
+    border-radius: 2px;
+}
+
+form{
+    width: 500px;
+}
+input{
+    margin-left: 1%;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoList from './components/TodoList'
 import TodoForm from './components/TodoForm'
-
+import './components/Todo.css'
 
 
 const todos =  [
@@ -18,8 +18,8 @@ const todos =  [
   },
 
   { 
-    task: 'Bake Cookies',
-    id: 1528817084358,
+    task: 'Schmoke Weed',
+    id: 1528817084352,
     completed: false
   }
 ];
@@ -43,7 +43,7 @@ class App extends React.Component { // 'C' Declare your class
     return(
       <div className = 'app-container'>
 
-        <h2>Todo List</h2>
+        <h1>Todo List</h1>
         <TodoList todos = {todos} />
         <TodoForm />
       </div>

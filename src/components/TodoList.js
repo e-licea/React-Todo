@@ -9,14 +9,15 @@ import Todo from '../components/Todo'
 const TodoList = props => {
 
     return(
-        <div className = 'shopping-list'>
+        <div className = 'todo-list-container'>
+           <ol className = 'todo-list'>
             {props.todos.map(todo => (
                 <Todo 
                 key = {todo.id}
                 todo = {todo}
                 toggleItem = {props.toggleItem} />
             ))}
-
+        </ol>
         </div>
     )
 }
