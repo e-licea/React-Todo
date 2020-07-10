@@ -2,8 +2,8 @@ import React from 'react';
 
 class TodoForm extends React.Component {
     //constructor with state
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             todo: ''
         }
@@ -13,15 +13,22 @@ class TodoForm extends React.Component {
     handleChanges = e => {
         //update state with each keystroke
         console.log('el: TodoForm.js : handleChanges: e.target.value: ', e.target.value)
-        this.setState({todo: e.target.value})
-        
+        this.setState({todo: e.target.value}) 
+        //this.setState({[e.target.name]: e.target.value})    Also works!
     }
 
-    //class property to submit form
+    //class property to submit form 
+    handleSubmit = e =>{
+        e.preventDefault();
+        this.props.addTodo(this.state.todos)
+        console.log('Submitted bitch')
+    }
+
+
 
     render(){
         return(
-            <form>
+            <form onSubmit = {this.handleSubmit}>
                 
 
                 {/*this is an uncontrolled component*/}
@@ -31,7 +38,7 @@ class TodoForm extends React.Component {
                             
                             placeholder = '      Enter task here    '
                             type = 'text'
-                            name = 'item'
+                            name = 'todo'
                             value = {this.state.todo}
                             onChange = {this.handleChanges}
                         />  

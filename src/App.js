@@ -39,13 +39,33 @@ class App extends React.Component { // 'C' Declare your class
     this.state = { todos };
   }
 
+//Class method to update state of todos
+
+addTodo = todoName => {
+  this.setState({
+    todos: [
+      ...this.state.todos,
+      {
+        task: todoName,
+        id: Date.now() ,
+        completed: false
+
+      }
+    ]
+  })
+}
+
+
   render() {  
     return(
       <div className = 'app-container'>
 
         <h1>Todo List</h1>
-        <TodoList todos = {todos} />
-        <TodoForm />
+        <TodoList 
+          todos = {todos} 
+          
+        />
+        <TodoForm addTodo = {this.addTodo} />
       </div>
     )
   }

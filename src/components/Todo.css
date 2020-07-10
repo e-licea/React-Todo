@@ -33,6 +33,7 @@ html{
 
 li {
     color: white;
+    margin-bottom: 3%;
 }
 
 .add-task-btn{
@@ -47,4 +48,5 @@ form{
 }
 input{
     margin-left: 1%;
+    color: black;
 }
